@@ -74,3 +74,10 @@ function getWeatherImage(weatherCode) {
 searchBtn.addEventListener("click", () => {
     checkWeather(searchBox.value);
 });
+
+searchBox.addEventListener("keydown", (event) => {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        checkWeather(searchBox.value);
+    }
+});
